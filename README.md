@@ -1,2 +1,2 @@
-# ech Degree Project 1 - Number Guessing Game
+# Tech Degree Project 1 - Number Guessing Game
  
