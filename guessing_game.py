@@ -1,5 +1,6 @@
 
 import random
+from statistics import mean, median, mode
 
 def start_game():
     hidden_number = random.randint(1, 100)
@@ -34,6 +35,16 @@ def start_game():
                 print("So far, no one's been able to to be the all-time high score. Which is {} guesses!".format(correct_score[0]))
             if play_game.lower() == 'no':
                 print("Aw okay; Well, I'm around so come by again to play if you feel bored. See you soon!")
+
+                print(f"Number of tries: {len(correct_score)}")
+                print(f"All Scores: {correct_score}")
+                mode_score = mode(correct_score)
+                print(f"Your mode is: {mode_score}")
+                median_score = median(correct_score)
+                print(f"Your median is: {median_score}")
+                mean_score = mean(correct_score)
+                print(f"Your mean is: {round(mean_score,2)}")
+
                 break
             else:
                 guesses = 0
